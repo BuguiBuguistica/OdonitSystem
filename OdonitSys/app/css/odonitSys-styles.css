@@ -1,0 +1,379 @@
+﻿.content-tabs{
+    padding:20px 20px 0 20px;
+}
+
+.space-top-01 {
+    margin-top:10px
+}
+
+.space-top-02 {
+    margin-top:20px
+}
+
+/*GRID *******************************************************/
+.gridStyle {
+    border: 2px solid rgb(212,212,212);
+    width: 100%; 
+    min-height: 300px;
+}
+.gridStyleService {
+    border: 2px solid rgb(212,212,212);
+    width: 100%; 
+    min-height: 200px;
+}
+.ngHeaderCell {
+    background-color: #0081C6;
+}
+.ngHeaderSortColumn {
+    background-color:#0081C6;
+    color:#fff;
+    border-bottom:1px solid rgb(255,255,255);
+}
+.gridCell {
+    padding: 5px;
+}
+
+.nav-tabs > li > a {
+    display:block;
+    text-align:center
+}
+/*TITLES ****************************************************/
+
+.title-form {
+    width:100%;
+    border-bottom: 2px solid #0081C6;
+    float:left;
+    position:relative;
+    height:25px;
+    margin-bottom:20px
+}
+.title-form > div{
+font-weight:bold;
+color:#0081C6;
+position:absolute;
+border-bottom:2px solid  #fff;
+display:block;
+top:0;
+left:0;
+z-index:100;
+height:25px;
+padding:7px
+}
+
+/*ODONTOGRAMA ****************************/
+.content-piezaDental {
+    text-align:center; 
+    float:left; 
+    margin-right:5px;
+}
+
+.number-piezaDental {
+    display:block;
+    font-size: 0.8em;
+}
+/*MENU sprite******************************************/
+.service-container {
+    border:1px solid #E6E6E6;
+    border-radius:5px;
+    /*float:left;*/
+}
+    .service-container .menu-action {
+        margin:0
+    }
+    .service-container .menu-action > div {
+        padding:0;
+    }
+        .service-container .menu-action .line-separation-buttons{
+            border-left: 1px solid #fff;            
+        }
+        .service-container .menu-action .clean-action {
+            padding:0 10px;
+            line-height:57px;
+        }
+.service-container > div {
+    margin:10px;
+}
+ul.menu-prestaciones {
+    
+    background:#E6E6E6;
+    height:57px;
+    padding: 0 0 0 7px;
+    margin-top: 1px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.menu-prestaciones li {
+    display:inline-block;
+}
+    .menu-prestaciones li a:link {
+        display: block;
+        width: 50px;
+        height: 56px;
+        background: url(../images/sprite-buttons.png) top left no-repeat;
+        padding-right:0;
+        margin-right:0;
+        margin-left:-5px;
+    }
+    /*LINKS*/
+    .menu-prestaciones li a.carie-ar:link {
+        background-position:-50px 0;
+    }
+     .menu-prestaciones li a.extraccion-ar:link {
+        background-position:-100px 0;
+    }
+      .menu-prestaciones li a.corona-ar:link {
+        background-position:-150px 0;
+    }
+      .menu-prestaciones li a.tratamientoConducto-ar:link {
+        background-position:-200px 0;
+    }
+      .menu-prestaciones li a.restauracion-r:link {
+        background-position:-250px 0;
+    }
+    .menu-prestaciones li a.extraccion-r:link {
+        background-position:-300px 0;
+    }
+    .menu-prestaciones li a.elementoAusente-r:link {
+        background-position:-350px 0;
+    }
+    .menu-prestaciones li a.corona-r:link {
+        background-position:-400px 0;
+    }
+    .menu-prestaciones li a.sellante-r:link {
+        background-position:-450px 0;
+    }
+    .menu-prestaciones li a.tratamientoConducto-r:link {
+        background-position:-500px 0;
+    }
+    .menu-prestaciones li a.elementoEnErupcionSup-r:link {
+        background-position:-550px 0;
+    }
+    .menu-prestaciones li a.elementoEnErupcionInf-r:link {
+        background-position:-600px 0;
+    }
+    /*HOVER*/
+    .menu-prestaciones li a.fractura-ar:hover {
+        background-position:0 -56px;
+    }
+    .menu-prestaciones li a.carie-ar:hover {
+        background-position:-50px -56px;
+    }
+     .menu-prestaciones li a.extraccion-ar:hover {
+        background-position:-100px -56px;
+    }
+      .menu-prestaciones li a.corona-ar:hover {
+        background-position:-150px -56px;
+    }
+      .menu-prestaciones li a.tratamientoConducto-ar:hover {
+        background-position:-200px -56px;
+    }
+      .menu-prestaciones li a.restauracion-r:hover {
+        background-position:-250px -56px;
+    }
+    .menu-prestaciones li a.extraccion-r:hover {
+        background-position:-300px -56px;
+    }
+    .menu-prestaciones li a.elementoAusente-r:hover {
+        background-position:-350px -56px;
+    }
+    .menu-prestaciones li a.corona-r:hover {
+        background-position:-400px -56px;
+    }
+    .menu-prestaciones li a.sellante-r:hover {
+        background-position:-450px -56px;
+    }
+    .menu-prestaciones li a.tratamientoConducto-r:hover {
+        background-position:-500px -56px;
+    }
+    .menu-prestaciones li a.elementoEnErupcionSup-r:hover {
+        background-position:-550px -56px;
+    }
+    .menu-prestaciones li a.elementoEnErupcionInf-r:hover {
+        background-position:-600px -56px;
+    }
+
+    /*ACTIVE*/
+    .menu-prestaciones li a.fractura-ar:active,.menu-prestaciones li a.fractura-ar.active {
+        background-position:0 -112px;
+    }
+    .menu-prestaciones li a.carie-ar:active,.menu-prestaciones li a.carie-ar.active {
+        background-position:-50px -112px;
+    }
+     .menu-prestaciones li a.extraccion-ar:active,.menu-prestaciones li a.extraccion-ar.active {
+        background-position:-100px -112px;
+    }
+      .menu-prestaciones li a.corona-ar:active,.menu-prestaciones li a.corona-ar.active {
+        background-position:-150px -112px;
+    }
+      .menu-prestaciones li a.tratamientoConducto-ar:active,.menu-prestaciones li a.tratamientoConducto-ar.active {
+        background-position:-200px -112px;
+    }
+      .menu-prestaciones li a.restauracion-r:active,.menu-prestaciones li a.restauracion-r.active {
+        background-position:-250px -112px;
+    }
+    .menu-prestaciones li a.extraccion-r:active,.menu-prestaciones li a.extraccion-r.active {
+        background-position:-300px -112px;
+    }
+    .menu-prestaciones li a.elementoAusente-r:active,.menu-prestaciones li a.elementoAusente-r.active {
+        background-position:-350px -112px;
+    }
+    .menu-prestaciones li a.corona-r:active,.menu-prestaciones li a.corona-r.active {
+        background-position:-400px -112px;
+    }
+    .menu-prestaciones li a.sellante-r:active,.menu-prestaciones li a.sellante-r.active {
+        background-position:-450px -112px;
+    }
+    .menu-prestaciones li a.tratamientoConducto-r:active,.menu-prestaciones li a.tratamientoConducto-r.active {
+        background-position:-500px -112px;
+    }
+    .menu-prestaciones li a.elementoEnErupcionSup-r:active,.menu-prestaciones li a.elementoEnErupcionSup-r.active {
+        background-position:-550px -112px;
+    }
+    .menu-prestaciones li a.elementoEnErupcionInf-r:active,.menu-prestaciones li a.elementoEnErupcionInf-r:active {
+        background-position:-600px -112px;
+    }
+
+.hide {
+display:none;
+}
+.show {
+display:block;
+}
+.red {
+ color: #FF0000;
+}
+.blue {
+color: #0081C6;
+}
+.bold {
+font-weight:bold;
+}
+.opacity {
+    background-color:rgba(255, 255, 255, 0.5)
+}
+
+/**Validaciones**/
+.form-group.required .control-label:after {
+  content:" *";
+  font-size:14px;
+  color:red;
+}
+.css-form.submitted input.ng-invalid, .css-form.submitted select.ng-invalid  {
+    border-color: #FA787E;
+}
+.css-form .alert {
+    margin-top:5px;
+    margin-bottom:5px;
+    padding: 5px;
+}
+/**Create treatment service modal**/
+.rowModal {
+    margin-top: -15px;
+    background: #f3f3f3;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.alert-container {
+    height:60px;
+}
+
+/**Busquedas**/
+.separation-search-container {
+    margin-top:26px;
+}
+
+/*NavBar*/
+.navbar {
+    border: none;
+    border-bottom: #0081C6 3px solid;
+    border-radius: 0;
+    min-height: 60px;
+    margin-bottom: 10px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #0081C6;
+}
+.navbar-nav > li > a {
+    line-height: 30px;
+    min-height: 60px;
+}
+.navbar-icon {
+    display:block;
+    float:left;
+    margin-right:5px;
+    width: 31px;
+    height: 32px;  
+}
+#patientIcon {
+    background:url("../images/patientIcon-grey.svg") no-repeat top center;
+    background-size: 25px 25px;
+}
+.active #patientIcon {
+    background:url("../images/patientIcon-white.svg") no-repeat top center;
+    background-size: 25px 25px;
+}
+#medicalHistoryIcon {
+    background:url("../images/MedicalHistoryIcon-grey.svg") no-repeat top center;   
+    background-size: 25px 25px;
+}
+.active #medicalHistoryIcon {
+    background:url("../images/MedicalHistoryIcon-white.svg") no-repeat top center; 
+    background-size: 27px 27px;
+}
+#odontogramaIcon {
+    background:url("../images/odontogramaIcon-grey.svg") no-repeat top center;    
+    background-size: 25px 25px;
+}
+.active #odontogramaIcon {
+    background:url("../images/odontogramaIcon-white.svg") no-repeat top center;      
+    background-size: 25px 25px;
+}
+#reportIcon {
+    background:url("../images/reportIcon-grey.svg") no-repeat top center;    
+    background-size: 25px 25px;
+}
+.active #reportIcon {
+    background:url("../images/reportIcon-white.svg") no-repeat top center;      
+    background-size: 25px 25px;
+}
+.patientIconBlue {
+    background:url("../images/patientIcon-blue.svg") no-repeat top center;
+    background-size: 25px 25px;
+}
+/*Buttons grid actions*/
+.buttonContainerGrid {
+    margin: 20px 0;
+}
+
+.footerBottomSeparator {
+    border-top: #D4D4D4 2px solid;
+    padding:10px 0;
+}
+.btn i {
+    margin-right:4px;
+}
+
+/*Modal*/
+.modal-header {
+    background: #0081C6;
+    color: #fff;
+}
+
+/*Header Historia Clinica*/
+.headerHistoriaClinica {
+    background: #f8f8f8;
+    padding: 5px;
+    margin-bottom: 15px;
+    border-bottom:2px solid #0081C6;
+}
+    .headerHistoriaClinica .back {
+        margin-top: 40px;
+    }
+
+/*Accordion*/
+.panel-default > .panel-heading {
+    color: #fff;
+    background-color: #0081C6;
+}

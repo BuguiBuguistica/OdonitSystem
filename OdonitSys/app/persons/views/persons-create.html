@@ -1,0 +1,354 @@
+﻿<div data-ng-controller="personCreateController">    
+    <form name="form" class="css-form" ng-class="{submitted:submitted}" novalidate>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="title-form">
+                    <div>Información Personal</div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group required" >
+                        <label class="col-sm-3 control-label">Nombre</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="uName" data-ng-model="person.FirstName" class="form-control" required ng-readonly="onlyReadInputs">
+                            <div class="alert alert-danger" ng-show="form.$submitted && form.uName.$error.required">
+                                <div ng-show="form.uName.$error.required">Nombre es requerido</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-3 control-label">Apellido</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="lName" data-ng-model="person.LastName" class="form-control" required ng-readonly="onlyReadInputs">
+                            <div class="alert alert-danger" ng-show="form.$submitted && form.lName.$error.required">
+                                <div ng-show="form.lName.$error.required">Apellido es requerido</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-3 control-label">DNI</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="id" class="form-control" data-ng-model="person.Code" required ng-readonly="onlyReadInputs"/>
+                            <div class="alert alert-danger" ng-show="(form.$submitted && form.id.$error.required) || (form.$submitted && invalidFieldCode)">
+                                <div ng-show="form.id.$error.required">DNI es requerido</div>
+                                <span ng-show="invalidFieldCode">Campo numérico</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Nacimiento</label>
+                        <div class="col-sm-9">
+                            <p class="input-group">
+                                <input data-ng-change="calculateAge(person.BirthDate)" type="text" class="form-control" datepicker-popup="dd/MM/yyyy" ng-model="person.BirthDate" show-button-bar="false" is-open="openedBirthday" max-mode="maxDay" ng-readonly="onlyReadInputs"/>
+                                <span class="input-group-btn">
+                                    <button type="button" ng-disabled="onlyReadInputs" class="btn btn-default" data-ng-click="openCalendar($event, 'birthday')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="title-form">
+                    <div>Seguro Médico</div>
+                </div>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Obra Social</label>
+                        <div class="col-sm-9">
+                            <input type="text" ng-model="medicalSecurity" typeahead-on-select="updateModel(medicalSecurity)" typeahead="ms as ms.Name for ms in medicalSecurityList | filter:$viewValue | limitTo:8" class="form-control" ng-readonly="onlyReadInputs">                        
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Plan</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" data-ng-model="person.SecurityPlan" ng-readonly="onlyReadInputs">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Número</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" data-ng-model="person.SecurityNumber" ng-readonly="onlyReadInputs">
+                            <div class="alert alert-danger" ng-show="(form.$submitted && invalidFieldSecurityNumber)">
+                                <span ng-show="invalidFieldSecurityNumber">Campo numérico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-form">
+                    <div>Datos de Contacto</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group required">
+                        <label class="col-sm-3 control-label">Domicilio</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="address" data-ng-model="person.Address.Street" class="form-control" required ng-readonly="onlyReadInputs">
+                            <div class="alert alert-danger" ng-show="form.$submitted && form.address.$error.required">
+                                <div ng-show="form.address.$error.required">Domicilio es requerido</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-3 control-label">Número</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="number" data-ng-model="person.Address.Number" class="form-control" required ng-readonly="onlyReadInputs">
+                            <div class="alert alert-danger" ng-show="(form.$submitted && form.number.$error.required) || (form.$submitted && invalidAddressNumber)">
+                                <div ng-show="form.number.$error.required">Número es requerido</div>
+                                <span ng-show="invalidAddressNumber">Campo numérico</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-3 control-label">CP</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="cp" data-ng-model="person.Address.ZipCode" class="form-control" required ng-readonly="onlyReadInputs">
+                            <div class="alert alert-danger" ng-show="(form.$submitted && form.cp.$error.required)  || (form.$submitted && invalidAddressZipCode)">
+                                <div ng-show="form.cp.$error.required">CP es requerido</div>
+                                <span ng-show="invalidAddressZipCode">Campo numérico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group required">
+                        <label class="col-sm-3 control-label">Celular</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="celular" data-ng-model="person.Contact.CellPhone" class="form-control" required ng-readonly="onlyReadInputs">
+                            <div class="alert alert-danger" ng-show="form.$submitted && form.celular.$error.required">
+                                <div ng-show="form.celular.$error.required">Celular es requerido</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Teléfono</label>
+                        <div class="col-sm-9">
+                            <input type="text" data-ng-model="person.Contact.LandPhone" class="form-control" ng-readonly="onlyReadInputs">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Email</label>
+                        <div class="col-sm-9">
+                            <input type="text" data-ng-model="person.Contact.Email" class="form-control" ng-readonly="onlyReadInputs">
+                            <div class="alert alert-danger" ng-show="form.$submitted && invalidFieldEmail">
+                                <div ng-show="invalidFieldEmail">Campo email invalido</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-form">
+                    <div>Antescedentes Clínicos</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Medicación Actual</label>
+                        <div class="col-sm-9">
+                            <input type="text" data-ng-model="person.MedicalHistory.CurrentMedication" class="form-control" ng-readonly="onlyReadInputs">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal required">
+                    <div class="form-group required">
+                        <label class="col-sm-3 control-label">Grupo Sanguineo</label>
+                        <div class="col-sm-9">
+                            <select name="bloodGroup" class="form-control" data-ng-model="person.MedicalHistory.BloodGroup" required ng-readonly="onlyReadInputs" ng-disabled="onlyReadInputs">
+                                <option>O-</option>
+                                <option>O+</option>
+                                <option>B+</option>
+                                <option>B-</option>
+                                <option>A+</option>
+                                <option>A-</option>
+                                <option>AB+</option>
+                                <option>AB-</option>
+                            </select>
+                            <div class="alert alert-danger" ng-show="form.$submitted && form.bloodGroup.$error.required">
+                                <div ng-show="form.bloodGroup.$error.required">Grupo sanguíneo es requerido</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+                <span class="small">Padece de alguna de estas codiciones</span>
+            </div>
+            <div class="col-md-6">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="person.MedicalHistory.Alergic" ng-readonly="onlyReadInputs">
+                        Alergias
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="person.MedicalHistory.Hemorrhage" ng-readonly="onlyReadInputs">
+                        Hemorragias
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="person.MedicalHistory.Diabetes" ng-readonly="onlyReadInputs">
+                        Diabetes
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="person.MedicalHistory.HeartDisease" ng-readonly="onlyReadInputs">
+                        Cardiopatías
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="person.MedicalHistory.RespiratoryDisease" ng-readonly="onlyReadInputs">
+                        Enfermedades Respiratorias
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="person.MedicalHistory.KidneyDisease" ng-readonly="onlyReadInputs">
+                        Nefropatías
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="person.MedicalHistory.Hepatitis" ng-readonly="onlyReadInputs">
+                        Hepatítis
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="person.MedicalHistory.Hypertension" ng-readonly="onlyReadInputs">
+                        Hipertensión Arterial
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="person.MedicalHistory.STD" ng-readonly="onlyReadInputs">
+                        ETS
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Fecha Embarazo</label>
+                        <div class="col-sm-9">
+                            <p class="input-group">
+                                <input type="text" class="form-control" datepicker-popup="dd/MM/yyyy" data-ng-model="person.MedicalHistory.PregnancyDate" is-open="openedPregnancyDate" max-mode="maxDay" show-button-bar="false" ng-readonly="onlyReadInputs"/>
+                                <span class="input-group-btn">
+                                    <button type="button" ng-disabled="onlyReadInputs" class="btn btn-default" data-ng-click="openCalendar($event,'PregnancyDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Fecha Transfusión</label>
+                        <div class="col-sm-9">
+                            <p class="input-group">
+                                <input type="text" class="form-control" datepicker-popup="dd/MM/yyyy" data-ng-model="person.MedicalHistory.TransfusionDate" is-open="openedTransfusionDate" max-mode="maxDay" show-button-bar="false" ng-readonly="onlyReadInputs"/>
+                                <span class="input-group-btn">
+                                    <button type="button" ng-disabled="onlyReadInputs" class="btn btn-default" data-ng-click="openCalendar($event, 'TransfusionDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Observaciones</label>
+                        <div class="col-sm-9 ">
+                            <textarea class="form-control" data-ng-model="person.MedicalHistory.Observations" rows="3" ng-readonly="onlyReadInputs"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Otros</label>
+                        <div class="col-sm-9 ">
+                            <textarea class="form-control" data-ng-model="person.MedicalHistory.Others" rows="3" ng-readonly="onlyReadInputs"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Hábitos</label>
+                        <div class="col-sm-9 ">
+                            <textarea class="form-control" data-ng-model="person.MedicalHistory.Habits" rows="3" ng-readonly="onlyReadInputs"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-form">
+                    <div>Examen</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Extraoral</label>
+                        <div class="col-sm-9 ">
+                            <textarea class="form-control" data-ng-model="person.MedicalHistory.Exam.Extraoral" rows="3" ng-readonly="onlyReadInputs"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Intraoral</label>
+                        <div class="col-sm-9 ">
+                            <textarea class="form-control" data-ng-model="person.MedicalHistory.Exam.Intraoral" rows="3" ng-readonly="onlyReadInputs"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Otros</label>
+                        <div class="col-sm-9 ">
+                            <textarea class="form-control" data-ng-model="person.MedicalHistory.Exam.Others" rows="3" ng-readonly="onlyReadInputs"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Observaciones</label>
+                        <div class="col-sm-9 ">
+                            <textarea class="form-control" data-ng-model="person.MedicalHistory.Exam.Observations" rows="3" ng-readonly="onlyReadInputs"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footerBottomSeparator">
+            <div class="col-md-9">
+                <button ng-disabled="onlyReadInputs" data-ng-click="savePerson()" type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" data-ng-disabled="disabledAddServicesButton" class="btn pull-right btn-secundary" ng-click="AddService()"><i class="glyphicon glyphicon-plus"></i>Prestación</button>
+            </div>
+        </div>
+    </form>
+</div>

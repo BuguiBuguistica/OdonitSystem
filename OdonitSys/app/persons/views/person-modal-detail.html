@@ -1,0 +1,26 @@
+﻿<div>
+    <div class="modal-header">
+        <h4 class="modal-title">{{person.FirstName}} {{person.LastName}}</h4>
+    </div>
+    <div class="modal-body">
+        <strong>Grupo Sanguíneo {{person.MedicalHistory.BloodGroup}}</strong>
+        <h5 class="bold">Contacto</h5>
+        <ul>
+            <li>Dirección: {{person.Address.Street}} {{person.Address.Number}}</li>
+            <li>Código Postal: {{person.Address.ZipCode}}</li>
+            <li>Celular: {{person.Contact.CellPhone}}</li>
+            <li>Teléfono: {{person.Contact.LandPhone}}</li>
+            <li>Email: {{person.Contact.Email}}</li>
+        </ul>
+        <h5 class="bold">Datos Obra Social</h5>
+        <ul ng-show="person.MedicalSecurity">
+            <li>Nombre: {{person.MedicalSecurity.Name}}</li>
+            <li>Plan: {{person.SecurityPlan}}</li>
+            <li>Número: {{person.SecurityNumber}}</li>
+        </ul>
+        <span ng-show="!person.MedicalSecurity">Particular</span>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="close()">Cerrar</button>
+    </div>
+</div>

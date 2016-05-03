@@ -1,0 +1,226 @@
+﻿[
+    { 
+        "quadrant1":[
+            {
+                "ToothId":1,
+                "Code": 18
+            },
+            {
+                "ToothId":2,
+                "Code": 17
+            },
+            {
+                "ToothId":3,
+                "Code": 16
+            },
+            {
+                "ToothId":4,
+                "Code": 15
+            },
+            {
+                "ToothId":5,
+                "Code": 14
+            },
+            {
+                "ToothId":6,
+                "Code": 13
+            },
+            {
+                "ToothId":7,
+                "Code": 12
+            },
+            {
+                "ToothId":8,
+                "Code": 11
+            },
+            {
+                "ToothId":17,
+                "Code": 48
+            },
+            {
+                "ToothId":18,
+                "Code": 47
+            },
+            {
+                "ToothId":19,
+                "Code": 46
+            },
+            {
+                "ToothId":20,
+                "Code": 45
+            },
+            {
+                "ToothId":21,
+                "Code": 44
+            },
+            {
+                "ToothId":22,
+                "Code": 43
+            },
+            {
+                "ToothId":23,
+                "Code": 42
+            },
+            {
+                "ToothId":24,
+                "Code": 41
+            }
+        ]
+    },
+    {
+        "quadrant2":[
+               {
+                    "ToothId":9,
+                    "Code": 21
+                },
+                {
+                    "ToothId":10,
+                    "Code": 22
+                },
+                {
+                    "ToothId":11,
+                    "Code": 23
+                },
+                {
+                    "ToothId":12,
+                    "Code": 24
+                },
+                {
+                    "ToothId":13,
+                    "Code": 25
+                },
+                {
+                    "ToothId":14,
+                    "Code": 26
+                },
+                {
+                    "ToothId":15,
+                    "Code": 27
+                },
+                {
+                    "ToothId":16,
+                    "Code": 28
+                },
+                {
+                    "ToothId":25,
+                    "Code": 31
+                },
+                {
+                    "ToothId":26,
+                    "Code": 32
+                },
+                {
+                    "ToothId":27,
+                    "Code": 33
+                },
+                {
+                    "ToothId":28,
+                    "Code": 34
+                },
+                {
+                    "ToothId":29,
+                    "Code": 35
+                },
+                {
+                    "ToothId":30,
+                    "Code": 36
+                },
+                {
+                    "ToothId":31,
+                    "Code": 37
+                },
+                {
+                    "ToothId":32,
+                    "Code": 38
+                }
+        ]
+    },
+    {
+        "quadrant3":[
+            {
+                "ToothId":33,
+                "Code": 55
+            },
+            {
+                "ToothId":34,
+                "Code": 54
+            },
+            {
+                "ToothId":35,
+                "Code": 53
+            },
+            {
+                "ToothId":36,
+                "Code": 52
+            },
+            {
+                "ToothId":37,
+                "Code": 51
+            },
+            {
+                "ToothId":43,
+                "Code": 85
+            },
+            {
+                "ToothId":44,
+                "Code": 84
+            },
+            {
+                "ToothId":45,
+                "Code": 83
+            },
+            {
+                "ToothId":46,
+                "Code": 82
+            },
+            {
+                "ToothId":47,
+                "Code": 81
+            }
+        ]
+    },
+    {
+      "quadrant4":[  {
+                "ToothId":38,
+                "Code": 61
+            },
+            {
+                "ToothId":39,
+                "Code": 62
+            },
+            {
+                "ToothId":40,
+                "Code": 63
+            },
+            {
+                "ToothId":41,
+                "Code": 64
+            },
+            {
+                "ToothId":42,
+                "Code": 65
+            },
+    
+            {
+                "ToothId":48,
+                "Code": 71
+            },
+            {
+                "ToothId":49,
+                "Code": 72
+            },
+            {
+                "ToothId":50,
+                "Code": 73
+            },
+            {
+                "ToothId":51,
+                "Code": 74
+            },
+            {
+                "ToothId":52,
+                "Code": 75
+            }
+        ]
+    }    
+]

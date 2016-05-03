@@ -1,0 +1,40 @@
+﻿<div data-ng-controller="servicesSearchController">
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-3">
+                <label class="control-label">Apellido</label>
+                <input type="text" data-ng-model="person.lastName" class="form-control">
+            </div>
+            <div class="col-md-2">
+                <label class="control-label">DNI</label>
+                <input type="text" class="form-control" data-ng-model="person.code">
+            </div>
+            <div class="col-md-3">
+                <label class="control-label">Obra Social</label>
+                <input type="text" ng-model="person.medicalSecurity" typeahead="ms as ms.Name for ms in medicalSecurityList | filter:$viewValue | limitTo:8" class="form-control">
+            </div>
+            <div class="col-md-2">
+                <label class="control-label">Número Historia Clínica</label>
+                <input type="text" data-ng-model="person.medicalHistoryId" class="form-control">
+            </div>
+            <div class="col-md-2 separation-search-container text-right">
+                <button type="submit" class="btn btn-primary" data-ng-click="searchPerson()"><i class="glyphicon glyphicon-search"></i></button>
+                <button type="button" class="btn btn-default" data-ng-click="cleanInputs()"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="row space-top-02 ">
+        <div class="col-md-12">
+            <div class="gridStyle" data-ng-grid="gridOptions"></div>            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <pagination previous-text="&lsaquo;" next-text="&rsaquo;" class="pagination-sm" items-per-page="itemsPerPage" total-items="totalItems" ng-model="currentPage" ng-change="setPagingData()"></pagination>
+        </div> 
+        <div class="col-md-6  buttonContainerGrid text-right">
+            <button ng-click="ManageService()" type="button" ng-disabled="!personSelected.length" class="btn btn-default"><i class="glyphicon glyphicon-pencil"></i></button>
+        </div>       
+    </div>
+</div>
+

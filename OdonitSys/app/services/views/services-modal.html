@@ -1,0 +1,107 @@
+﻿<div>
+    <div class="modal-header">
+        <h4 class="modal-title">{{tituloModal}}</h4>
+        <small ng-hide="edit">Debe seleccionar Pieza dental y Tratamiento.</small>
+    </div>
+    <div class="modal-body">
+        <div class="row rowModal form-horizontal">
+            <div  class="col-md-3">
+                <p ng-show="edit">Pieza Dental: <strong>{{service.Tooth.Code}}</strong></p>
+                <div ng-hide="edit"><label>Pieza Dental</label> 
+                    <tooth-selector ></tooth-selector>
+                </div>
+                
+                <!--<input  type="text" placeholder="Número de pieza" data-ng-model="service.ToothId" class="form-control">-->                
+            </div>
+             <div class="col-md-3">
+                 <p ng-show="edit">Cara: <strong>{{service.Face.Name}}</strong></p>
+                 <div ng-hide="edit">
+                     <label>Cuadrante</label>
+                    <select  ng-change="fillFacesSelect()" class="form-control" ng-model="quadrant">
+                        <option value="0"></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>  
+                 </div>                              
+            </div>
+            <div class="col-md-6">
+                <p ng-show="edit">Servicio inicial: <strong>{{service.Service.Name}}</strong></p>                
+                <div ng-hide="edit">
+                    <label>Cara</label>
+                    <select  class="form-control" ng-model="service.FaceId" ng-disabled="!quadrant">
+                        <option ng-repeat="option in faces" value="{{option.FaceId}}">{{option.Name}}</option>
+                    </select>
+                </div>                
+            </div>           
+        </div>
+        <div class="row space-top-01">
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Tratamiento</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" ng-model="service.TreatmentId">
+                            <option ng-repeat="option in treatmentServices" value="{{option.TreatmentId}}"><strong>{{option.Code}}</strong> {{option.Name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Diagnóstico</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" data-ng-model="service.Diagnosis" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Estado</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" ng-model="service.StatusId">
+                            <option ng-repeat="option in status" value="{{option.StatusId}}">{{option.Name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Periodo</label>
+                    <div class="col-sm-9">
+                        <p class="input-group">
+                            <input type="text" class="form-control" datepicker-popup="dd/MM/yyyy" ng-model="service.InitialDate" show-button-bar="false" is-open="datepicker.openedFromDate" max-mode="maxDay" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" data-ng-click="openCalendar($event, 'fromDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </p>
+                        <p class="input-group">
+                            <input type="text" class="form-control" datepicker-popup="dd/MM/yyyy" ng-model="service.EndDate" show-button-bar="false" is-open="datepicker.openedToDate" max-mode="maxDay" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" data-ng-click="openCalendar($event, 'toDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Valor</label>
+                    <div class="col-sm-9">
+                        <input type="text" data-ng-model="service.Amount" class="form-control">                        
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Abonado</label>
+                    <div class="col-sm-9">
+                        <input type="text" data-ng-model="service.Payment" class="form-control">                        
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Saldo</label>
+                    <div class="col-sm-9">
+                        <input readonly="true" type="text" data-ng-model="service.Remainder" class="form-control">                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button ng-disabled="isInvalid" class="btn btn-primary" type="button" ng-click="save()">Guardar</button>
+        <button class="btn btn-default" type="button" ng-click="close()">Cancelar</button>
+    </div>
+</div>

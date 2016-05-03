@@ -1,0 +1,14 @@
+﻿ [
+        {
+            "StatusId": 1,
+            "Name": "Inicial"
+        },
+        {
+            "StatusId": 2,
+            "Name": "Intermedio"
+        },
+        {
+            "StatusId": 3,
+            "Name": "Finalizado"
+        }
+]

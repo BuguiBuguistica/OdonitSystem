@@ -1,0 +1,23 @@
+﻿<div style="width:100px; height:34px; border:1px solid #ccc;position:relative;  border-radius:4px">
+    <button class="btn btn-primary" style="border:none; border-bottom-right-radius: 0; border-top-right-radius: 0; float:left;"><i style="color:#fff" class="glyphicon glyphicon-option-horizontal"></i></button>     
+    <div style="display:block; float:left; line-height: 34px; margin-left: 5px;">{{toothSelected.Code}}</div>
+    <div id="tableTooth" ng-show="showTableTooth" style="width:516px; padding:2px; background:#fff;  border:1px solid #ccc; position:absolute; z-index:10; top:0; left:0">
+        
+        <div class="row">
+            <div class="col-md-6">
+                <button ng-repeat="tooth in toothList[0].quadrant1" style="width:28px; line-height:28px; float:left; border:1px solid #ccc; margin:1px; border-radius:5px; text-align:center" ng-click="selectTooth(tooth)">{{tooth.Code}}</button>
+            </div>
+            <div class="col-md-6">
+                <button ng-repeat="tooth in toothList[1].quadrant2" style="width:28px; line-height:28px; float:left; border:1px solid #ccc;  margin:1px; border-radius:5px; text-align:center" ng-click="selectTooth(tooth)">{{tooth.Code}}</button>
+            </div>
+        </div>
+         <div class="row space-top-01">
+            <div class="col-md-6">
+                <button ng-repeat="tooth in toothList[2].quadrant3" style="width:28px; line-height:28px; float:left; border:1px solid #ccc;  margin:1px; border-radius:5px; text-align:center" ng-click="selectTooth(tooth)">{{tooth.Code}}</button>
+            </div>
+            <div class="col-md-6">
+                <button ng-repeat="tooth in toothList[3].quadrant4" style="width:28px; line-height:28px; float:left; border:1px solid #ccc;  margin:1px; border-radius:5px; text-align:center" ng-click="selectTooth(tooth)">{{tooth.Code}}</button>
+            </div>
+        </div>
+    </div>
+</div>

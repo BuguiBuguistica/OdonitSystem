@@ -1,0 +1,103 @@
+﻿ [
+        {
+			"quadrant":1,
+            "data": [
+				{
+					"FaceId":1,
+					"Name":"vestibular"
+				},
+				{
+					"FaceId":2,
+					"Name":"mesial"
+				},
+				{
+					"FaceId":3,
+					"Name":"palatina"
+				},
+				{
+					"FaceId":4,
+					"Name":"distal"
+				},
+				{
+					"FaceId":9,
+					"Name":"oclusal"
+				}
+			]
+        },
+		{
+		"quadrant": 2,
+            "data": [
+				{
+					"FaceId":1,
+					"Name":"vestibular"
+				},
+				{
+					"FaceId":2,
+					"Name":"mesial"
+				},
+				{
+					"FaceId":3,
+					"Name":"palatina"
+				},
+				{
+					"FaceId":4,
+					"Name":"distal"
+				},
+				{
+					"FaceId":9,
+					"Name":"oclusal"
+				}
+			]
+        },
+		{
+		"quadrant": 3,
+            "data": [
+				{
+					"FaceId":5,
+					"Name":"lingual"
+				},
+				{
+					"FaceId":6,
+					"Name":"distal"
+				},
+				{
+					"FaceId":7,
+					"Name":"vestibular"
+				},
+				{
+					"FaceId":8,
+					"Name":"mesial"
+				},
+				{
+					"FaceId":9,
+					"Name":"oclusal"
+				}
+			]
+        },
+		{
+		"quadrant": 4,
+            "data": [
+				{
+					"FaceId":5,
+					"Name":"lingual"
+				},
+				{
+					"FaceId":6,
+					"Name":"distal"
+				},
+				{
+					"FaceId":7,
+					"Name":"vestibular"
+				},
+				{
+					"FaceId":8,
+					"Name":"mesial"
+				},
+				{
+					"FaceId":9,
+					"Name":"oclusal"
+				}
+			]
+        }
+       
+]

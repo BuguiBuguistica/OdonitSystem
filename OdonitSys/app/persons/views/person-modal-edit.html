@@ -1,0 +1,155 @@
+﻿<div>
+    <div class="modal-header">
+        <h4 class="modal-title">{{person.FirstName}} {{person.LastName}}</h4>
+    </div>
+    <div class="modal-body">
+        <form name="form" class="css-form" ng-class="{submitted:submitted}" novalidate>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="title-form">
+                        <div>Información Personal</div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group required">
+                            <label class="col-sm-3 control-label">Nombre</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="uName" data-ng-model="person.FirstName" class="form-control" required>
+                                <div class="alert alert-danger" ng-show="form.$submitted && form.uName.$error.required">
+                                    <div ng-show="form.uName.$error.required">Nombre es requerido</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group required">
+                            <label class="col-sm-3 control-label">Apellido</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="lName" data-ng-model="person.LastName" class="form-control" required>
+                                <div class="alert alert-danger" ng-show="form.$submitted && form.lName.$error.required">
+                                    <div ng-show="form.lName.$error.required">Apellido es requerido</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group required">
+                            <label class="col-sm-3 control-label">DNI</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="id" class="form-control" data-ng-model="person.Code" required>
+                                <div class="alert alert-danger" ng-show="form.$submitted && form.id.$error.required">
+                                    <div ng-show="form.id.$error.required">DNI es requerido</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Nacimiento</label>
+                            <div class="col-sm-9">
+                                <p class="input-group">
+                                    <input data-ng-change="calculateAge(person.BirthDate)" type="text" class="form-control" datepicker-popup="dd/MM/yyyy" ng-model="person.BirthDate" show-button-bar="false" is-open="openedBirthday" max-mode="maxDay" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" data-ng-click="openCalendar($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="title-form">
+                        <div>Seguro Médico</div>
+                    </div>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Obra Social</label>
+                            <div class="col-sm-9">
+                                <input type="text" ng-model="person.MedicalSecurity" typeahead-on-select="updateModel(person.MedicalSecurity)" typeahead="ms as ms.Name for ms in medicalSecurityList | filter:$viewValue | limitTo:8" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Plan</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" data-ng-model="person.SecurityPlan">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Número</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" data-ng-model="person.SecurityNumber">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12">
+                <div class="title-form">
+                    <div>Datos de Contacto</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group required">
+                        <label class="col-sm-3 control-label">Domicilio</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="address" data-ng-model="person.Address.Street" class="form-control" required>
+                            <div class="alert alert-danger" ng-show="form.$submitted && form.address.$error.required">
+                                <div ng-show="form.address.$error.required">Domicilio es requerido</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-3 control-label">Número</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="number" data-ng-model="person.Address.Number" class="form-control" required>
+                            <div class="alert alert-danger" ng-show="(form.$submitted && form.number.$error.required) || (form.$submitted && invalidAddressNumber)">
+                                <div ng-show="form.number.$error.required">Número es requerido</div>
+                                <span ng-show="invalidAddressNumber">Campo numérico</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-3 control-label">CP</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="cp" data-ng-model="person.Address.ZipCode" class="form-control" required>
+                            <div class="alert alert-danger" ng-show="(form.$submitted && form.cp.$error.required)  || (form.$submitted && invalidAddressZipCode)">
+                                <div ng-show="form.cp.$error.required">CP es requerido</div>
+                                <span ng-show="invalidAddressZipCode">Campo numérico</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group required">
+                        <label class="col-sm-3 control-label">Celular</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="celular" data-ng-model="person.Contact.CellPhone" class="form-control" required>
+                            <div class="alert alert-danger" ng-show="form.$submitted && form.celular.$error.required">
+                                <div ng-show="form.celular.$error.required">Celular es requerido</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Teléfono</label>
+                        <div class="col-sm-9">
+                            <input type="text" data-ng-model="person.Contact.LandPhone" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Email</label>
+                        <div class="col-sm-9">
+                            <input type="text" data-ng-model="person.Contact.Email" class="form-control">
+                            <div class="alert alert-danger" ng-show="form.$submitted && invalidFieldEmail">
+                                <div ng-show="invalidFieldEmail">Campo email invalido</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default" type="button" ng-click="cancel()">Cancelar</button>
+        <button class="btn btn-primary" type="button" ng-click="save()">Guardar</button>
+    </div>
+</div>

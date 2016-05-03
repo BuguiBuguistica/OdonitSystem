@@ -1,0 +1,25 @@
+﻿<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand brand" href="#"><img src="app/images/marcaOdonit-14.svg" /></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li ng-class="{active:$state.includes('/.persons')}"><a href="#" ui-sref="/.persons.search"><i id="patientIcon" class="navbar-icon"></i>Pacientes</a></li>
+        <li ng-class="{active:$state.includes('/.medicalHistory')}"><a href="#" ui-sref="/.medicalHistory.search"><i id="medicalHistoryIcon" class="navbar-icon"></i>Historia Clínica</a></li>
+        <li ng-class="{active:$state.includes('/.services')}"><a href="#" ui-sref="/.services.search"><i id="odontogramaIcon" class="navbar-icon"></i>Prestaciones</a></li>
+          <li ng-class="{active:$state.includes('/.report')}"><a href="#" ui-sref="/.report"><i id="reportIcon" class="navbar-icon"></i>Reportes</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

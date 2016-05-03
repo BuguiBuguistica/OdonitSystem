@@ -1,0 +1,94 @@
+﻿<div ng-controller="ServiceFormController">
+    <div class="row headerHistoriaClinica">
+        <div class="col-md-8">
+            <h3 class="blue"><i class="navbar-icon patientIconBlue"></i>{{person.FirstName}} {{person.LastName}}</h3>
+            <h4>Historia Clínica Número: {{person.MedicalHistoryId}}</h4>
+        </div>
+        <div class="col-md-4 back">
+            <button ng-click="search()" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-search"></i>Volver a Buscar</button>
+        </div>
+    </div>
+    <!--<div class="row">
+        <div class="col-md-12">
+            <accordion class="pull-left space-top-01" style="width: 100%">
+                <accordion-group is-open="true">
+                  <accordion-heading>
+                    Listado de Prestaciones <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                  </accordion-heading>-->
+                  <div class="row">
+                    <div class="col-md-4 form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Fecha Inicio</label>
+                            <div class="col-sm-9">
+                                <p class="input-group">
+                                    <input type="text" class="form-control" datepicker-popup="dd/MM/yyyy" ng-model="filter.fromDate" show-button-bar="false" is-open="datepicker.openedFromDate" max-mode="maxDay" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" data-ng-click="openCalendar($event, 'fromDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </p>    
+                                <p class="input-group">
+                                    <input type="text" class="form-control" datepicker-popup="dd/MM/yyyy" ng-model="filter.toDate" show-button-bar="false" is-open="datepicker.openedToDate" max-mode="maxDay" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" data-ng-click="openCalendar($event, 'toDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </p>                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Tratamiento</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" ng-model="filter.treatment">
+                                  <option ng-repeat="option in treatmentServices" value="{{option.TreatmentId}}"><strong>{{option.Code}}</strong> {{option.Name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group space-top-01">
+                            <label class="col-sm-3 control-label">Servicio</label>
+                            <div class="col-sm-9">
+                                 <select class="form-control" ng-model="filter.service">
+                                  <option ng-repeat="option in odontogramServices" value="{{option.ServiceId}}">{{option.Name}}</option>
+                                </select>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="col-md-4 form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Estado</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" ng-model="filter.status">
+                                  <option ng-repeat="option in status" value="{{option.StatusId}}">{{option.Name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="col-md-4 text-right">
+                          <button type="button" class="btn btn-primary" ng-click="getToothServices()"><i class="glyphicon glyphicon-search"></i></button>
+                          <button type="button" class="btn btn-default" ng-click="cleanInputs()"><i class="glyphicon glyphicon-remove"></i></button>
+                      </div>
+                  </div>
+                  <div class="row">
+                        <div class="col-md-12">
+                            <div class="gridStyleService" data-ng-grid="gridOptions"></div>                           
+                        </div> 
+                  </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                             <pagination previous-text="&lsaquo;" next-text="&rsaquo;" class="pagination-sm" items-per-page="itemsPerPage" total-items="totalItems" ng-model="currentPage" ng-change="setPagingData()"></pagination>
+                        </div>
+                        <div class="col-md-6 buttonContainerGrid text-right">
+                          <button class="btn btn-default" ng-click="edit()" ng-disabled="!serviceSelectedFromGrid.length"><i class="glyphicon glyphicon-pencil"></i></button>                          
+                        </div>
+                    </div>
+                    <div class="row footerBottomSeparator">
+                        <div class="col-md-12">
+                            <button class="btn btn-default" ng-click="goToOdontogram()"><i class="glyphicon glyphicon-th-large"></i>Odontograma</button>
+                            <button class="btn btn-default" ng-click="new()" ><i class="glyphicon glyphicon-plus"></i>Prestación</button>
+                        </div>
+                    </div>
+              <!--  </accordion-group>
+            </accordion>
+        </div>-->
+    <!--</div>-->
+</div>

@@ -1,0 +1,214 @@
+﻿<div ng-controller="medicalHistoryEditController">
+    <div class="row headerHistoriaClinica">
+        <div class="col-md-8">
+            <h3 class="blue"><i class="navbar-icon patientIconBlue"></i>{{person.FirstName}} {{person.LastName}}</h3> 
+            <h4>Historia Clínica Número: {{medicalHistory.MedicalHistoryId}}</h4>
+        </div>
+        <div class="col-md-4 back">
+            <button ng-click="search()" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-search"></i>Volver a Buscar</button>
+        </div>
+    </div>
+    <form name="form" class="css-form" ng-class="{submitted:submitted}" novalidate>        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-form">
+                    <div>Antescedentes Clínicos</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Medicación Actual</label>
+                        <div class="col-sm-9">
+                            <input type="text" data-ng-model="medicalHistory.CurrentMedication" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Grupo Sanguineo</label>
+                        <div class="col-sm-9">
+                            <select name="bloodGroup" class="form-control" data-ng-model="medicalHistory.BloodGroup" required>
+                                <option>O-</option>
+                                <option>O+</option>
+                                <option>B+</option>
+                                <option>B-</option>
+                                <option>A+</option>
+                                <option>A-</option>
+                                <option>AB+</option>
+                                <option>AB-</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-12">
+                <span class="small">Padece de alguna de estas codiciones</span>
+            </div>
+            <div class="col-md-6">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="medicalHistory.Alergic">
+                        Alergias
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="medicalHistoryy.Hemorrhage">
+                        Hemorragias
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="medicalHistory.Diabetes">
+                        Diabetes
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="medicalHistory.HeartDisease">
+                        Cardiopatías
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="medicalHistory.RespiratoryDisease">
+                        Enfermedades Respiratorias
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="medicalHistory.KidneyDisease">
+                        Nefropatías
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="medicalHistory.Hepatitis">
+                        Hepatítis
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="medicalHistory.Hypertension">
+                        Hipertensión Arterial
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="medicalHistory.STD">
+                        ETS
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Fecha Embarazo</label>
+                        <div class="col-sm-9">
+                            <p class="input-group">
+                                <input type="text" class="form-control" datepicker-popup="dd/MM/yyyy" data-ng-model="medicalHistory.PregnancyDate" is-open="openedPregnancyDate" max-mode="maxDay" show-button-bar="false"/>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default" data-ng-click="openCalendar($event,'PregnancyDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Fecha Transfusión</label>
+                        <div class="col-sm-9">
+                            <p class="input-group">
+                                <input type="text" class="form-control" datepicker-popup="dd/MM/yyyy" data-ng-model="medicalHistory.TransfusionDate" is-open="openedTransfusionDate" max-mode="maxDay" show-button-bar="false"/>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default" data-ng-click="openCalendar($event, 'TransfusionDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Observaciones</label>
+                        <div class="col-sm-9 ">
+                            <textarea class="form-control" data-ng-model="medicalHistory.Observations" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Otros</label>
+                        <div class="col-sm-9 ">
+                            <textarea class="form-control" data-ng-model="medicalHistory.Others" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Hábitos</label>
+                        <div class="col-sm-9 ">
+                            <textarea class="form-control" data-ng-model="medicalHistory.Habits" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title-form">
+                    <div>Examen</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Extraoral</label>
+                        <div class="col-sm-9 ">
+                            <textarea class="form-control" data-ng-model="medicalHistory.Exam.Extraoral" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Intraoral</label>
+                        <div class="col-sm-9 ">
+                            <textarea class="form-control" data-ng-model="medicalHistory.Exam.Intraoral" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Otros</label>
+                        <div class="col-sm-9 ">
+                            <textarea class="form-control" data-ng-model="medicalHistory.Exam.Others" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Observaciones</label>
+                        <div class="col-sm-9 ">
+                            <textarea class="form-control" data-ng-model="medicalHistory.Exam.Observations" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footerBottomSeparator">
+            <div class="col-md-9">
+                <button data-ng-click="saveChanges()" type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+            <div class="col-md-3">
+                <button ng-click="AddService()" type="button" data-ng-disabled="disabledServicesButton" class="btn pull-right btn-secundary"><i class="glyphicon glyphicon-plus"></i>Prestaciones</button>
+            </div>
+        </div>
+    </form>
+</div>
