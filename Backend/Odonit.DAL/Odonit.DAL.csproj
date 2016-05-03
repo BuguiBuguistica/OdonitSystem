@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB882D67-B706-4813-B7A4-9C5CDC93EC26}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Odonit.DAL</RootNamespace>
+    <AssemblyName>Odonit.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\AddressConfig.cs" />
+    <Compile Include="Configuration\ContactConfig.cs" />
+    <Compile Include="Configuration\ExamConfig.cs" />
+    <Compile Include="Configuration\FaceConfig.cs" />
+    <Compile Include="Configuration\MedicalHistoryConfig.cs" />
+    <Compile Include="Configuration\MedicalSecurityConfig.cs" />
+    <Compile Include="Configuration\PatientConfig.cs" />
+    <Compile Include="Configuration\PersonConfig.cs" />
+    <Compile Include="Configuration\ServiceConfig.cs" />
+    <Compile Include="Configuration\StatusConfig.cs" />
+    <Compile Include="Configuration\ToothConfig.cs" />
+    <Compile Include="Configuration\ToothServiceConfig.cs" />
+    <Compile Include="Configuration\TreatmentConfig.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="Migrations\201509022233333_Init.cs" />
+    <Compile Include="Migrations\201509022233333_Init.Designer.cs">
+      <DependentUpon>201509022233333_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510232351563_nuevosCamposPersonaObraSocial.cs" />
+    <Compile Include="Migrations\201510232351563_nuevosCamposPersonaObraSocial.Designer.cs">
+      <DependentUpon>201510232351563_nuevosCamposPersonaObraSocial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510242127049_AgregandoCampoNumberAddress.cs" />
+    <Compile Include="Migrations\201510242127049_AgregandoCampoNumberAddress.Designer.cs">
+      <DependentUpon>201510242127049_AgregandoCampoNumberAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510242239116_CampoEdadPersonaNOComputado.cs" />
+    <Compile Include="Migrations\201510242239116_CampoEdadPersonaNOComputado.Designer.cs">
+      <DependentUpon>201510242239116_CampoEdadPersonaNOComputado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510310110449_NewTables.cs" />
+    <Compile Include="Migrations\201510310110449_NewTables.Designer.cs">
+      <DependentUpon>201510310110449_NewTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510310114346_NewTablesForServices.cs" />
+    <Compile Include="Migrations\201510310114346_NewTablesForServices.Designer.cs">
+      <DependentUpon>201510310114346_NewTablesForServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510310118511_laCONCHA.cs" />
+    <Compile Include="Migrations\201510310118511_laCONCHA.Designer.cs">
+      <DependentUpon>201510310118511_laCONCHA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510310123425_RemoveTables.cs" />
+    <Compile Include="Migrations\201510310123425_RemoveTables.Designer.cs">
+      <DependentUpon>201510310123425_RemoveTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510310125194_1.cs" />
+    <Compile Include="Migrations\201510310125194_1.Designer.cs">
+      <DependentUpon>201510310125194_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510310131063_2.cs" />
+    <Compile Include="Migrations\201510310131063_2.Designer.cs">
+      <DependentUpon>201510310131063_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510310200147_bla.cs" />
+    <Compile Include="Migrations\201510310200147_bla.Designer.cs">
+      <DependentUpon>201510310200147_bla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510310208151_removerTablaServiceTooth.cs" />
+    <Compile Include="Migrations\201510310208151_removerTablaServiceTooth.Designer.cs">
+      <DependentUpon>201510310208151_removerTablaServiceTooth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510310209515_toothServiceAdding.cs" />
+    <Compile Include="Migrations\201510310209515_toothServiceAdding.Designer.cs">
+      <DependentUpon>201510310209515_toothServiceAdding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510310235181_AddingColumnPosition-FaceTable.cs" />
+    <Compile Include="Migrations\201510310235181_AddingColumnPosition-FaceTable.Designer.cs">
+      <DependentUpon>201510310235181_AddingColumnPosition-FaceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510310242478_AddingColumnQuadrant-FaceTable.cs" />
+    <Compile Include="Migrations\201510310242478_AddingColumnQuadrant-FaceTable.Designer.cs">
+      <DependentUpon>201510310242478_AddingColumnQuadrant-FaceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510311658149_AddNewTable-Status.cs" />
+    <Compile Include="Migrations\201510311658149_AddNewTable-Status.Designer.cs">
+      <DependentUpon>201510311658149_AddNewTable-Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510311717223_AddTable-Treatment.cs" />
+    <Compile Include="Migrations\201510311717223_AddTable-Treatment.Designer.cs">
+      <DependentUpon>201510311717223_AddTable-Treatment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511012136563_configureColumnsToBeOptional.cs" />
+    <Compile Include="Migrations\201511012136563_configureColumnsToBeOptional.Designer.cs">
+      <DependentUpon>201511012136563_configureColumnsToBeOptional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511012139098_configureColumnsToBeOptional-ToothService.cs" />
+    <Compile Include="Migrations\201511012139098_configureColumnsToBeOptional-ToothService.Designer.cs">
+      <DependentUpon>201511012139098_configureColumnsToBeOptional-ToothService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511152201442_AddTable-MedicalSecurity.cs" />
+    <Compile Include="Migrations\201511152201442_AddTable-MedicalSecurity.Designer.cs">
+      <DependentUpon>201511152201442_AddTable-MedicalSecurity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511190037328_ServiceId-OptionalField-ToothServiceTable.cs" />
+    <Compile Include="Migrations\201511190037328_ServiceId-OptionalField-ToothServiceTable.Designer.cs">
+      <DependentUpon>201511190037328_ServiceId-OptionalField-ToothServiceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Address.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\Exam.cs" />
+    <Compile Include="Models\Face.cs" />
+    <Compile Include="Models\MedicalHistory.cs" />
+    <Compile Include="Models\MedicalSecurity.cs" />
+    <Compile Include="Models\Odontogram.cs" />
+    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\PatientsReport.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\ReportFilter.cs" />
+    <Compile Include="Models\Service.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\Tooth.cs" />
+    <Compile Include="Models\ToothService.cs" />
+    <Compile Include="Models\Treatment.cs" />
+    <Compile Include="OdonitContext.cs" />
+    <Compile Include="Report.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201509022233333_Init.resx">
+      <DependentUpon>201509022233333_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510232351563_nuevosCamposPersonaObraSocial.resx">
+      <DependentUpon>201510232351563_nuevosCamposPersonaObraSocial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510242127049_AgregandoCampoNumberAddress.resx">
+      <DependentUpon>201510242127049_AgregandoCampoNumberAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510242239116_CampoEdadPersonaNOComputado.resx">
+      <DependentUpon>201510242239116_CampoEdadPersonaNOComputado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510310110449_NewTables.resx">
+      <DependentUpon>201510310110449_NewTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510310114346_NewTablesForServices.resx">
+      <DependentUpon>201510310114346_NewTablesForServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510310118511_laCONCHA.resx">
+      <DependentUpon>201510310118511_laCONCHA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510310123425_RemoveTables.resx">
+      <DependentUpon>201510310123425_RemoveTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510310125194_1.resx">
+      <DependentUpon>201510310125194_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510310131063_2.resx">
+      <DependentUpon>201510310131063_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510310200147_bla.resx">
+      <DependentUpon>201510310200147_bla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510310208151_removerTablaServiceTooth.resx">
+      <DependentUpon>201510310208151_removerTablaServiceTooth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510310209515_toothServiceAdding.resx">
+      <DependentUpon>201510310209515_toothServiceAdding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510310235181_AddingColumnPosition-FaceTable.resx">
+      <DependentUpon>201510310235181_AddingColumnPosition-FaceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510310242478_AddingColumnQuadrant-FaceTable.resx">
+      <DependentUpon>201510310242478_AddingColumnQuadrant-FaceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510311658149_AddNewTable-Status.resx">
+      <DependentUpon>201510311658149_AddNewTable-Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510311717223_AddTable-Treatment.resx">
+      <DependentUpon>201510311717223_AddTable-Treatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511012136563_configureColumnsToBeOptional.resx">
+      <DependentUpon>201511012136563_configureColumnsToBeOptional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511012139098_configureColumnsToBeOptional-ToothService.resx">
+      <DependentUpon>201511012139098_configureColumnsToBeOptional-ToothService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511152201442_AddTable-MedicalSecurity.resx">
+      <DependentUpon>201511152201442_AddTable-MedicalSecurity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511190037328_ServiceId-OptionalField-ToothServiceTable.resx">
+      <DependentUpon>201511190037328_ServiceId-OptionalField-ToothServiceTable.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

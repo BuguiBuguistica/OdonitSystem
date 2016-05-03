@@ -1,0 +1,50 @@
+D:\Odonit\Odonit\Odonit.DAL\bin\Debug\Odonit.DAL.dll.config
+D:\Odonit\Odonit\Odonit.DAL\bin\Debug\Odonit.DAL.dll
+D:\Odonit\Odonit\Odonit.DAL\bin\Debug\Odonit.DAL.pdb
+D:\Odonit\Odonit\Odonit.DAL\bin\Debug\EntityFramework.dll
+D:\Odonit\Odonit\Odonit.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Odonit\Odonit\Odonit.DAL\bin\Debug\log4net.dll
+D:\Odonit\Odonit\Odonit.DAL\bin\Debug\EntityFramework.xml
+D:\Odonit\Odonit\Odonit.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Odonit\Odonit\Odonit.DAL\bin\Debug\log4net.xml
+D:\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.dll
+D:\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.pdb
+D:\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.csprojResolveAssemblyReference.cache
+D:\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.Init.resources
+D:\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.csproj.GenerateResource.Cache
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\bin\Debug\Odonit.DAL.dll.config
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\bin\Debug\Odonit.DAL.dll
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\bin\Debug\Odonit.DAL.pdb
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\bin\Debug\EntityFramework.dll
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\bin\Debug\log4net.dll
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\bin\Debug\EntityFramework.xml
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\bin\Debug\log4net.xml
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.dll
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.pdb
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\bin\Debug\Newtonsoft.Json.dll
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\bin\Debug\Newtonsoft.Json.xml
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.csprojResolveAssemblyReference.cache
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.Init.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.csproj.GenerateResource.Cache
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.nuevosCamposPersonaObraSocial.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.AgregandoCampoNumberAddress.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.CampoEdadPersonaNOComputado.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.NewTables.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.NewTablesForServices.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.laCONCHA.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.RemoveTables.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations._1.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations._2.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.bla.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.removerTablaServiceTooth.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.toothServiceAdding.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.AddingColumnPositionFaceTable.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.AddingColumnQuadrantFaceTable.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.AddNewTableStatus.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.AddTableTreatment.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.configureColumnsToBeOptional.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.configureColumnsToBeOptionalToothService.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.AddTableMedicalSecurity.resources
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.DAL\obj\Debug\Odonit.DAL.Migrations.ServiceIdOptionalFieldToothServiceTable.resources

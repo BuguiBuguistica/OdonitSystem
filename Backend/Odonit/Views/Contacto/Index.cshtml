@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Odonit.Models.Contacto>
+@{
+    Layout = null;
+    ViewBag.Title = "Index";
+}
+
+<h2>Contacto</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apellido)
+        </td>
+    </tr>
+}
+    </table>

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odonit.DAL", "Odonit.DAL\Odonit.DAL.csproj", "{FB882D67-B706-4813-B7A4-9C5CDC93EC26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odonit.Business", "Odonit.Business\Odonit.Business.csproj", "{6FA4811F-670A-4157-8C63-699FEB71E3A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odonit.WebApi", "Odonit.WebApi\Odonit.WebApi.csproj", "{29C37AA1-C378-447E-BC94-941D8E55E611}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FB882D67-B706-4813-B7A4-9C5CDC93EC26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB882D67-B706-4813-B7A4-9C5CDC93EC26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB882D67-B706-4813-B7A4-9C5CDC93EC26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB882D67-B706-4813-B7A4-9C5CDC93EC26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FA4811F-670A-4157-8C63-699FEB71E3A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FA4811F-670A-4157-8C63-699FEB71E3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FA4811F-670A-4157-8C63-699FEB71E3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FA4811F-670A-4157-8C63-699FEB71E3A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29C37AA1-C378-447E-BC94-941D8E55E611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C37AA1-C378-447E-BC94-941D8E55E611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C37AA1-C378-447E-BC94-941D8E55E611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C37AA1-C378-447E-BC94-941D8E55E611}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

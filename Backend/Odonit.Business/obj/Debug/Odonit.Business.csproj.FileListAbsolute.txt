@@ -1,0 +1,24 @@
+D:\Odonit\Odonit\Odonit.Business\bin\Debug\Odonit.Business.dll
+D:\Odonit\Odonit\Odonit.Business\bin\Debug\Odonit.Business.pdb
+D:\Odonit\Odonit\Odonit.Business\bin\Debug\log4net.dll
+D:\Odonit\Odonit\Odonit.Business\bin\Debug\Odonit.DAL.dll
+D:\Odonit\Odonit\Odonit.Business\bin\Debug\EntityFramework.dll
+D:\Odonit\Odonit\Odonit.Business\bin\Debug\Odonit.DAL.pdb
+D:\Odonit\Odonit\Odonit.Business\bin\Debug\log4net.xml
+D:\Odonit\Odonit\Odonit.Business\bin\Debug\EntityFramework.xml
+D:\Odonit\Odonit\Odonit.Business\obj\Debug\Odonit.Business.csprojResolveAssemblyReference.cache
+D:\Odonit\Odonit\Odonit.Business\obj\Debug\Odonit.Business.dll
+D:\Odonit\Odonit\Odonit.Business\obj\Debug\Odonit.Business.pdb
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.Business\obj\Debug\Odonit.Business.csprojResolveAssemblyReference.cache
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.Business\bin\Debug\Odonit.Business.dll
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.Business\bin\Debug\Odonit.Business.pdb
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.Business\bin\Debug\log4net.dll
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.Business\bin\Debug\Odonit.DAL.dll
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.Business\bin\Debug\EntityFramework.dll
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.Business\bin\Debug\Odonit.DAL.pdb
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.Business\bin\Debug\log4net.xml
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.Business\bin\Debug\EntityFramework.xml
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.Business\obj\Debug\Odonit.Business.dll
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.Business\obj\Debug\Odonit.Business.pdb
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.Business\bin\Debug\Newtonsoft.Json.dll
+E:\Users\Vale\My Documents\TECNICATURA\Practicas Profesionales - Odonit\Odonit\Odonit\Odonit.Business\bin\Debug\Newtonsoft.Json.xml
